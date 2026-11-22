@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Baby! 🎂</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe1ec, #ffc4d6, #fff0f5);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #a83e69;
+    text-align: center;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.card {
+    background: rgba(255,255,255,0.75);
+    padding: 40px 25px;
+    border-radius: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 40px #d76c9630;
+    animation: muncul 2s ease;
+}
+
+@keyframes muncul {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #e75480;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.cake {
+    font-size: 90px;
+    margin: 20px 0;
+    animation: goyang 2s infinite;
+}
+
+@keyframes goyang {
+    0%,100% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+}
+
+.message {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+button {
+    border: none;
+    background: #ed75a0;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+button:hover {
+    background: #d94d82;
+    transform: scale(1.08);
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    line-height: 1.8;
+    animation: muncul 1s;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: terbang 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes terbang {
+    0% {transform: translateY(0) rotate(0); opacity: 1;}
+    100% {transform: translateY(-110vh) rotate(360deg); opacity: 0;}
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #bd6687;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <div style="font-size:35px;">🎀 💗 🎀</div>
+
+        <h1>Happy Birthday!
+            Kiki Amellia
+        </h1>
+
+        <p class="subtitle">
+            Hari spesial untuk seseorang yang spesial ✨
+        </p>
+
+        <div class="cake">🎂</div>
+
+        <h2>Selamat Ulang Tahun! 🥳</h2>
+
+        <div class="message">
+            Semoga hari hari mu selanjutnya dipenuhi dengan keceriaan, kebahagiaan dan keberuntungan.
+
+            <br><br>
+
+            Semoga semua impianmu perlahan menjadi
+            kenyataan. Jangan pernah berhenti tersenyum,
+            karena kamu pantas mendapatkan banyak
+            kebahagiaan di dunia ini. 💗
+
+            <br><br>
+
+            Stay happy, stay healthy, and keep shining! 🌷
+        </div>
+
+      
+<head>
+    <title>Button Gambar</title>
+</head>
+
+
+    <h2>Klik Tombol di Bawah!</h2>
+
+    <button onclick="tampilkanGambar()">
+        SURPRISE!
+    </button>
+
+    <br><br>
+
+<div>
+    <img id="gambar"
+         src="gambar/hbd.jpg"
+         alt="Happy Birthday!!"
+         style="display: none; width: 300px;">
+
+    <script>
+        function tampilkanGambar() {
+            document.getElementById("gambar").style.display = "block";
+        }
+    </script>
+</div>
+
+<div class="footer">
+    Made with love 💗
+</div>
+
+<script>
+
+function kejutan() {
+    const surprise = document.getElementById("surprise");
+
+    if (!surprise) return;
+
+    surprise.style.display = "block";
+
+    for (let i = 0; i < 35; i++) {
+        let heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML = ["💗", "💖", "💕", "🌸", "✨"][
+            Math.floor(Math.random() * 5)
+        ];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7000);
+    }
+}
+
+</script>
+
+</body>
+</html>
